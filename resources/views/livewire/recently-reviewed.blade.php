@@ -29,9 +29,21 @@
                 </p>
             </div>
         </div> <!-- end game -->
-    @empty 
-        <div>
-            Loading ...
-        </div>
+    @empty
+        @foreach(range(1,3) as $game)
+        <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
+                <div class="relative flex-none">
+                    <div class="bg-gray-700 w-32 lg:48 h-40 lg:h-56"></div>
+                </div>
+                <div class="ml-6 lg:ml-12">
+                    <div class="inline-block text-transparent text-lg bg-gray-700 rounded leading-tight  mt-4">Title goes here</div>
+                    <div class="mt-8 space-y-4 hidden lg:block">
+                        <span class="text-transparent bg-gray-700 rounded inline-block rounded">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, harum.</span>
+                        <span class="text-transparent bg-gray-700 rounded inline-block rounded">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, harum.</span>
+                        <span class="text-transparent bg-gray-700 rounded inline-block rounded">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, harum.</span>
+                    </div>
+                </div>
+            </div> <!-- end game -->
+        @endforeach    
     @endforelse
 </div>
