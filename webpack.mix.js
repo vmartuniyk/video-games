@@ -13,5 +13,15 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/main.css', 'public/css', [
-      require('tailwindcss'),
+      require('@tailwindcss/jit'),
     ])
+
+// // webpack.mix.js
+// const mix = require("laravel-mix");
+// const tailwindJit = require("@tailwindcss/jit");
+
+// mix.postCss("resources/css/app.css", "public/css").options({
+//   postCss: [
+//     require("tailwindJit"),
+//   ],
+// });
