@@ -25,7 +25,6 @@
                 <div class="flex flex-wrap items-center mt-8">
                     <div class="flex items-center">
                         <div id="memberRating" class="w-16 h-16 bg-gray-800 rounded-full relative text-sm">
-                            
                             @push('scripts')
                                 @include('_rating',[
                                     'slug' => 'memberRating',
@@ -33,13 +32,11 @@
                                     'event' => null,
                                 ])
                             @endpush
-                            
                         </div>
                         <div class="ml-4 text-xs">Member <br> Score</div>
                     </div>
                     <div class="flex items-center ml-12">
                         <div id="criticRating" class="w-16 h-16 bg-gray-800 rounded-full relative text-sm">
-                           
                             @push('scripts')
                                 @include('_rating',[
                                     'slug' => 'criticRating',
