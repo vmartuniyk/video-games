@@ -14,8 +14,8 @@ class PopularGames extends Component
 
     public function loadPopularGames(){
 
-        $before = Carbon::now()->subMonth(2)->timestamp;
-        $after = Carbon::now()->addMonth(2)->timestamp;
+        $before = Carbon::now()->subMonth(4)->timestamp;
+        $after = Carbon::now()->addMonth(4)->timestamp;
 
         $popularGamesUnformatted = Cache::remember('popular-games', 7, function ()use ($before, $after) {
         //   sleep(3);
@@ -24,7 +24,8 @@ class PopularGames extends Component
                 )->withBody("fields name, cover.url, first_release_date, total_rating_count, platforms.abbreviation, rating, rating_count, slug;
                     where platforms = (48,49,130,6)
                     & (first_release_date >= {$before}
-                    & first_release_date < {$after});
+                    & first_release_date < {$after}
+                    & total_rating_count > 5);
                     sort total_rating_count desc;
                     limit 12;","text/plain"
                 )->post(config('services.igdb.endpoint'))->json();
