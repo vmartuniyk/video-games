@@ -1,11 +1,7 @@
 <div class="game mt-8">
     <div class="relative inline-block">
         <a href="{{ route('games.show', $game['slug'])}}">
-            @if(isset($game['cover']['url']))
-                <img src="{{ $game['coverImageUrl'] }}" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
-            @else
-                <img src="cyberpunk.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
-            @endif
+            <img src="{{ $game['coverImageUrl'] }}" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
         </a>
         @if(isset($game['rating']))
             <div id="{{ $game['slug'] }}" class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style="right: -20px; bottom: -20px">
