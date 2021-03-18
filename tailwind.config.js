@@ -1,6 +1,7 @@
 module.exports = {
   purge: [
- 
+    './app/**/*.php',
+    './resources/**/*.php',
   ],
   theme: {
     extend: {
