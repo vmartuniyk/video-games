@@ -13,3 +13,7 @@ This application built in Laravel that uses the IGDB API to display some game in
 1. `php artisan key:generate`
 1. `php artisan serve` or use Laravel Valet or Laravel Homestead
 1. Visit `localhost:8000` in your browser
+
+### TODO
+1. Update placeholder images for empty game
+1. Update section Comming Soon and Reviews
