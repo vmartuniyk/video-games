@@ -1,6 +1,10 @@
+![games martuniyk space_](https://user-images.githubusercontent.com/13577787/111796726-20840f00-88d1-11eb-9dde-8564d0f18be8.png)
 
-## About Project
+
+
+# About Project
 This application built in Laravel that uses the IGDB API to display some game informations. This project uses HTTP client, Tailwind CSS, Livewire and Alpine.js 
+
 
 ## Installation
 
