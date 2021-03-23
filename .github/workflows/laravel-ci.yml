@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.3 # Измените на версию, нужную вам
+        extensions: mbstring, bcmath # Установите нужные вам php-расширения
     - uses: actions/checkout@v2
     - name: Copy .env.example to .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
