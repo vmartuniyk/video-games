@@ -36,7 +36,7 @@ jobs:
     - name: Install NPM dependencies
       run: npm install
     - name: Minify CSS and JS files
-      run: npm run prod
+      run: npx mix --production
     - name: Run unit tests via PHPUnit
       env:
         DB_CONNECTION: sqlite
