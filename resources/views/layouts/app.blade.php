@@ -13,10 +13,13 @@
         <nav class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 py-6">
             <div class="flex flex-col lg:flex-row items-center">
                 <a href="/">
-                    <img src="/laracasts-logo.svg" alt="laracasts" class="w-32 flex-none">
+                <!-- <h2>GameOk</h2> -->
+                    <!-- <img src="/laracasts-logo.svg" alt="laracasts" class="w-32 flex-none"> -->
+                    <img src="/console.svg" alt="Game info" class="w-32 h-16 flex-none">
+
                 </a>
                 <ul class="flex ml-0 lg:ml-16 space-x-8 mt-6 lg:mt-0">
-                    <li><a href="#" class="hover:text-gray-400">Games</a></li>
+                    <li><a href="/" class="hover:text-gray-400">Games</a></li>
                     <li><a href="#" class="hover:text-gray-400">Reviews</a></li>
                     <li><a href="#" class="hover:text-gray-400">Coming Soon</a></li>
                 </ul>
