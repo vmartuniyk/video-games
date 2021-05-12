@@ -56,7 +56,7 @@ class PopularGames extends Component
     private function formatForView($games){
         return collect($games)->map(function ($game){
             return collect($game)->merge([
-                'coverImageUrl' => isset($game['cover']['url']) ? Str::replaceFirst('thumb','cover_big', $game['cover']['url']) : 'cyberpunk_big.jpg',
+                'coverImageUrl' => isset($game['cover']['url']) ? Str::replaceFirst('thumb','cover_big', $game['cover']['url']) : 'images/cyberpunk_big.jpg',
                 'rating' => isset($game['rating']) ? round($game['rating']) : null,
                 'platforms' => collect($game['platforms'])->pluck('abbreviation')->implode(', '),
             ]);

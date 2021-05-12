@@ -36,7 +36,7 @@ class MostAnticipated extends Component
     private function formatForView($games){
         return collect($games)->map(function ($game){
             return collect($game)->merge([
-                'coverImageUrl' => isset($game['cover']['url']) ? Str::replaceFirst('thumb','cover_small', $game['cover']['url']) : 'cyberpunk_small.jpg',
+                'coverImageUrl' => isset($game['cover']['url']) ? Str::replaceFirst('thumb','cover_small', $game['cover']['url']) : 'images/cyberpunk_small.jpg',
                 'releaseDate' => Carbon::parse($game['first_release_date'])->format('M d, Y'),
             ]);
         })->toArray();

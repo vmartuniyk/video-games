@@ -13,10 +13,7 @@
         <nav class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 py-6">
             <div class="flex flex-col lg:flex-row items-center">
                 <a href="/">
-                <!-- <h2>GameOk</h2> -->
-                    <!-- <img src="/laracasts-logo.svg" alt="laracasts" class="w-32 flex-none"> -->
                     <img src="images/console.svg" alt="Game info" class="w-32 h-16 flex-none">
-
                 </a>
                 <ul class="flex ml-0 lg:ml-16 space-x-8 mt-6 lg:mt-0">
                     <li><a href="/" class="hover:text-gray-400">Games</a></li>
@@ -27,7 +24,7 @@
             <div class="flex items-center mt-6 lg:mt-0">
                 <livewire:search-dropdown>
                 <div class="ml-6">
-                    <a href="#"><img src="/avatar.jpg" alt="avatar" class="rounded-full w-8"></a>
+                    <a href="#"><img src="images/avatar.jpg" alt="avatar" class="rounded-full w-8"></a>
                 </div>
             </div>
         </nav>
