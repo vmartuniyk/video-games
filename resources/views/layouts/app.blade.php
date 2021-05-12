@@ -15,7 +15,7 @@
                 <a href="/">
                 <!-- <h2>GameOk</h2> -->
                     <!-- <img src="/laracasts-logo.svg" alt="laracasts" class="w-32 flex-none"> -->
-                    <img src="public/console.svg" alt="Game info" class="w-32 h-16 flex-none">
+                    <img src="images/console.svg" alt="Game info" class="w-32 h-16 flex-none">
 
                 </a>
                 <ul class="flex ml-0 lg:ml-16 space-x-8 mt-6 lg:mt-0">
