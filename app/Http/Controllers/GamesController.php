@@ -64,17 +64,19 @@ class GamesController extends Controller
                         "text/plain"
             )->post(config('services.igdb.endpoint'))->json();
         @abort_if(!$game, 404);
-
+        // dd($game);
+      
         return view('show',[
             'game' => $this->formatGameForView($game[0]),
         ]);
+        
     }
     private function formatGameForView($game){
         return collect($game)->merge([
-            'coverImageUrl' => Str::replaceFirst("thumb", "cover_big", $game['cover']['url']),
-            'genres' => collect($game['genres'])->pluck('name')->implode(', '),
-            'involvedCompanies'=> $game['involved_companies'][0]['company']['name'],
-            'platforms' => collect($game['platforms'])->pluck('abbreviation')->implode(', '),
+            'coverImageUrl' => isset($game['cover']['url']) ? Str::replaceFirst('thumb','cover_big', $game['cover']['url']) : 'images/cyberpunk_big.jpg',
+            'genres' => isset($game['genres']) ? collect($game['genres'])->pluck('name')->implode(', ') : 'Not genres yet',
+            'involvedCompanies'=> isset($game['involved_companies']) ? $game['involved_companies'][0]['company']['name'] : 'No companies yet',
+            'platforms' => isset($game['platforms']) ? collect($game['platforms'])->pluck('abbreviation')->implode(', ') : 'No platforms yet',
             'memberRating' => isset($game['rating']) ? round($game['rating']) : '0',
             'criticRating' => isset($game['aggregated_rating']) ? round($game['aggregated_rating']) : '0',
             'summary' => isset($game['summary']) ? $game['summary'] : 'No summary yet',

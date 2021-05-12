@@ -6,6 +6,7 @@
             <div class="flex-none">
                 <img src=" {{ $game['coverImageUrl'] }}" alt="game cover" class="hover:opacity-75 transition ease-in-out duration-150">
             </div>
+            
             <div class="lg:ml-12 xl:mr-64">
                 <h2 class="font-semibold text-4xl leading-tight mt-1">{{ $game['name'] }}</h2>
                 <div class="text-gray-400">
@@ -131,6 +132,7 @@
 
         <div x-data="{isImageModalVisible: false, image: ''}" class="images-container border-b border-gray-800 pb-12 mt-8">
             <h2 class="text-blue-500 uppercase tracking-wide font-semibold">Images</h2>
+            @if(isset($game['screenshots']))
             <div class="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
                 @foreach ($game['screenshots'] as $screenshot)
                     <div>
@@ -143,6 +145,9 @@
                     </div>
                 @endforeach
             </div>
+            @else
+                   <h3>No screenshots yet</h3>             
+            @endif
 
             <template x-if="isImageModalVisible">
                 <div
