@@ -19,5 +19,8 @@ This application built in Laravel that uses the IGDB API to display some game in
 1. Visit `localhost:8000` in your browser
 
 ### TODO
-1. Update placeholder images for empty game
+1. [x] Update placeholder images for empty game
 1. Update section Comming Soon and Reviews
+
+#### Important information
+ Atfer 60 days need generate NEW access_token for working app.  [Instruction here](https://api-docs.igdb.com/#breaking-changes).
