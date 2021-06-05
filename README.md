@@ -24,3 +24,5 @@ This application built in Laravel that uses the IGDB API to display some game in
 
 #### Important information
  Atfer 60 days need generate NEW access_token for working app.  [Instruction here](https://api-docs.igdb.com/#breaking-changes).
+
+
