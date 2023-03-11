@@ -25,7 +25,7 @@ class MostAnticipated extends Component
                 sort total_rating_count desc;
                 limit 4;","text/plain"
             )->post(config('services.igdb.endpoint'))->json();
-        
+
         $this->mostAnticipated = $this->formatForView($mostAnticipatedUnformatted);
     }
 
