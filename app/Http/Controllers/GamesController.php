@@ -21,7 +21,7 @@ class GamesController extends Controller
         // $afterFourMonths = Carbon::now()->addMonths(4)->timestamp;
         // $current = Carbon::now()->timestamp;
 
-        
+
 
         return view('index');
 
@@ -64,12 +64,11 @@ class GamesController extends Controller
                         "text/plain"
             )->post(config('services.igdb.endpoint'))->json();
         @abort_if(!$game, 404);
-        // dd($game);
-      
+
         return view('show',[
             'game' => $this->formatGameForView($game[0]),
         ]);
-        
+
     }
     private function formatGameForView($game){
         return collect($game)->merge([
@@ -113,7 +112,7 @@ class GamesController extends Controller
             ]
 
         ]);
-        
+
 
     }
     /**
